@@ -32,6 +32,8 @@ $(document).ready(function () {
 		$(e.target).removeClass("available").addClass("reserved");
 		$(e.target).css("background-color", "#ADAAAA");
 		
+		$(".forum").css("display", "block");
+		
 		$(".submit").on("click", function(e){
 			
 			$(".forum").css("display", "none");
