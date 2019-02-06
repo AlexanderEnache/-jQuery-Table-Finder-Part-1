@@ -6,7 +6,7 @@
 	<title>Make reservation today</title>
 	<link rel = "stylesheet" style = "text/style" href = "style.css">
 	
-	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
 	
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 	
@@ -20,14 +20,15 @@
 
 	<form class = "forum">
 	
-		<input type = "button" class = "close" value = "x">
+		<!-- <input type = "button" class = "close" value = "x"> -->
+		<button type = "button" class = "close"><i class="material-icons">close</i></button>
 	
 		<h2 class = "newRes">New Reservation</h2>
 		<p class = "tableNum">Table number :</p>
 		
-		<input class = "name" type = "textbox">
-		<input class = "phone" type = "textbox">
-		<input class = "num" type = "textbox">
+		<input class = "name" type = "textbox" placeholder = "Name">
+		<input class = "phone" type = "textbox" placeholder = "Phone number">
+		<input class = "num" type = "textbox" placeholder = "Number of guests">
 		
 		<input class = "submit" type = "button" value = "SAVE">
 	
@@ -46,17 +47,35 @@
 		
 			<div class = "tableContainer">
 		
-				<input id = "1" class = "table" type = "button" value = "1">
-				<input id = "2" class = "table" type = "button" value = "2">
-				<input id = "3" class = "table" type = "button" value = "3">
+				<button id = "1" class = "table" type = "button">1
+				<div id = "h1" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
+				<button id = "2" class = "table" type = "button">2
+				<div id = "h2" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
+				<button id = "3" class = "table" type = "button">3
+				<div id = "h3" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
 				
-				<input id = "4" class = "table" type = "button" value = "4">
-				<input id = "5" class = "table" type = "button" value = "5">
-				<input id = "6" class = "table" type = "button" value = "6">
+				<button id = "4" class = "table" type = "button">4
+				<div id = "h4" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
+				<button id = "5" class = "table" type = "button">5
+				<div id = "h5" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
+				<button id = "6" class = "table" type = "button">6
+				<div id = "h6" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
 				
-				<input id = "7" class = "table" type = "button" value = "7">
-				<input id = "8" class = "table" type = "button" value = "8">
-				<input id = "9" class = "table" type = "button" value = "9">
+				<button id = "7" class = "table" type = "button">7
+				<div id = "h7" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
+				<button id = "8" class = "table" type = "button">8
+				<div id = "h8" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
+				<button id = "9" class = "table" type = "button">9
+				<div id = "h9" class = 'hovered'><p class = 'hoverText'></p></div>
+				</button>
 				
 			</div>
 		

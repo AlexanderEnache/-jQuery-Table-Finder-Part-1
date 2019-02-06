@@ -5,6 +5,38 @@ html{
 	
 }
 
+.hovered{
+	
+	width: 175px;
+    height: 70px;
+	
+	z-index: 1;
+	
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	
+	background-color: #ADAAAA;
+	
+	border: solid black 3px;
+	border-radius: 5px;
+	
+	display: none;
+	
+}
+
+.reserved{
+	
+	background-color: #ADAAAA;
+	
+}
+
+.available{
+	
+	background-color: #EEE;
+	
+}
+
 .forum{
 	
 	position: fixed;
@@ -135,7 +167,7 @@ input{
 .tables{
 	
 	margin: 0px;
-	width: 90%;
+	width: 380px;
 	height: 290px;
 	
 	border-radius: 5px;
@@ -159,6 +191,8 @@ input{
 
 .table{
 	
+	position: relative;
+	
 	border-radius: 50px;
 	border: none;
 	
@@ -166,7 +200,6 @@ input{
     height: 75px;
     margin: 10px;
 	
-	background-color:#CCC;
 }
 
 
