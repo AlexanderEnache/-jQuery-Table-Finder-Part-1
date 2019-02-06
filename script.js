@@ -1,6 +1,7 @@
 
 "use strict"
 
+//<<<<<<< HEAD
 class Reservation{
 	
 	constructor(name, phone, num){
@@ -19,12 +20,19 @@ $(document).ready(function () {
 	
 	$(".table").addClass("available");
 	
+//=======
+$(document).ready(function () {
+	
+	console.log("sfwv");
+
+//>>>>>>> parent of baf63cc... def
 	$(".close").on("click", function(e){
 		
 		$(".forum").fadeOut(1000);
 		
 	});
 	
+//<<<<<<< HEAD
 	$(".table").on("click", function(e){
 		
 		$(".forum").fadeIn(1000);
@@ -42,6 +50,11 @@ $(document).ready(function () {
 			tabs[id - 1] = new Reservation($(".name").val(), $(".phone").val(), $(".num").val());
 			
 		});
+//=======
+	$(".submit").on("click", function(e){
+		
+		;
+//>>>>>>> parent of baf63cc... def
 		
 	});
 	
@@ -116,6 +129,9 @@ $(document).ready(function () {
 	
 });
 
+});
+
+});
 
 
 
@@ -130,5 +146,4 @@ $(document).ready(function () {
 
 
 
-
-
+\
