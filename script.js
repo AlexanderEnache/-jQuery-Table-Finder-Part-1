@@ -1,17 +1,12 @@
 
 "use strict"
 
-//<<<<<<< HEAD
 class Reservation{
-	
 	constructor(name, phone, num){
-		
 		this.name = name;
 		this.phone = phone;
 		this.num = num;
-		
 	}
-	
 }
 
 $(document).ready(function () {
@@ -20,47 +15,37 @@ $(document).ready(function () {
 	
 	$(".table").addClass("available");
 	
-//=======
-$(document).ready(function () {
-	
-	console.log("sfwv");
-
-//>>>>>>> parent of baf63cc... def
 	$(".close").on("click", function(e){
 		
 		$(".forum").fadeOut(1000);
 		
 	});
 	
-//<<<<<<< HEAD
+	let id;
+	
 	$(".table").on("click", function(e){
 		
 		$(".forum").fadeIn(1000);
 		
 		$(".tableNum").html("Table number : " + e.target.id);
 		
-		$(".submit").on("click", function(er){
-			
-			$(e.target).removeClass("available").addClass("reserved");
-			
-			$(".forum").fadeOut(1000);
-			
-			let id = Number(e.target.id);
-			
-			tabs[id - 1] = new Reservation($(".name").val(), $(".phone").val(), $(".num").val());
-			
-		});
-//=======
-	$(".submit").on("click", function(e){
-		
-		;
-//>>>>>>> parent of baf63cc... def
+		id = Number(e.target.id);
 		
 	});
 	
-	let offHover = true;
-	let offTable = true;
-	let id;
+	$(".submit").on("click", function(e){
+			
+		$("#"+String(id)).removeClass("available").addClass("reserved");
+			
+		tabs[id - 1] = new Reservation($(".name").val(), $(".phone").val(), $(".num").val());
+			
+		$(".name").val("");
+		$(".phone").val("");
+		$(".num").val("");
+			
+		$(".forum").fadeOut(1000);
+			
+	});
 	
 	$(".table").on("mouseenter", function(e){
 		
@@ -68,82 +53,21 @@ $(document).ready(function () {
 		
 		if(e.target.classList[1] == "reserved"){
 			
-			//offTable = false;
+			let obj = tabs[id-1];
 			
-			$("#h"+e.target.id).html(`Name: ${tabs[id-1].name}<br>Number of guests ${tabs[id-1].num}`);
-			
-			$("#h"+e.target.id).css("display", "block");
+			$("#"+e.target.id).prepend(`<div class = "hovered"><p class = "hoverText">Name: ${tabs[id-1].name}<br>Number of guests: ${tabs[id-1].num}</p></div>`);
 		
 		}
 		
 	});
-	
+
 	$(".table").on("mouseout", function(e){
 		
-		//$("#"+e.target.id).html(e.target.id);
-		id = e.target.id;
-		
-		//offTable = true;
-		
-		//console.log(offTable);
-		
-		$("#h"+id).css("display", "none");
-		
-		//Off();
+		$("#"+e.target.id).html(e.target.id);
 		
 	});
 	
-	/* $(".hovered").on("mouseenter", function(e){
-		
-		offHover = false;
-		
-	});
-	
-	$(".hovered").on("mouseout", function(e){
-			
-		//$("#"+e.target.id).html(e.target.id);
-		
-		offHover = true;
-		
-		console.log("sadfghjk"+offHover);
-		
-		Off();
-		
-	});
-	
-	function Off(){
-		
-		console.log("Shit");
-		
-		setTimeout(function(){
-			
-			if(offHover && offTable){
-				
-				$(".hovered").css("display", "none");
-				
-			}
-			
-		}, 750);
-	  
-	} */
-	
-});
-
-});
-
 });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-\
