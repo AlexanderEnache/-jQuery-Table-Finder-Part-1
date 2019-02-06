@@ -40,7 +40,6 @@ $(document).ready(function () {
 			let id = Number(e.target.id);
 			
 			tabs[id - 1] = new Reservation($(".name").val(), $(".phone").val(), $(".num").val());
-			$("#h"+e.target.id).prepend(`Name: ${tabs[id-1].name}<br>Number of guests ${tabs[id-1].num}`);
 			
 		});
 		
@@ -56,17 +55,13 @@ $(document).ready(function () {
 		
 		if(e.target.classList[1] == "reserved"){
 			
-			offTable = false;
+			//offTable = false;
+			
+			$("#h"+e.target.id).html(`Name: ${tabs[id-1].name}<br>Number of guests ${tabs[id-1].num}`);
 			
 			$("#h"+e.target.id).css("display", "block");
 		
 		}
-		
-	});
-	
-	$(".hovered").on("mouseenter", function(e){
-		
-		offHover = false;
 		
 	});
 	
@@ -75,9 +70,19 @@ $(document).ready(function () {
 		//$("#"+e.target.id).html(e.target.id);
 		id = e.target.id;
 		
-		offTable = true;
+		//offTable = true;
 		
 		//console.log(offTable);
+		
+		$("#h"+id).css("display", "none");
+		
+		//Off();
+		
+	});
+	
+	/* $(".hovered").on("mouseenter", function(e){
+		
+		offHover = false;
 		
 	});
 	
@@ -89,9 +94,11 @@ $(document).ready(function () {
 		
 		console.log("sadfghjk"+offHover);
 		
+		Off();
+		
 	});
 	
-	$(document).mousemove(function(e){
+	function Off(){
 		
 		console.log("Shit");
 		
@@ -103,9 +110,9 @@ $(document).ready(function () {
 				
 			}
 			
-		}, 5000);
+		}, 750);
 	  
-	});
+	} */
 	
 });
 
